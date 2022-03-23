@@ -9,9 +9,7 @@ Terrain:
 
 Mountains:
   Name: Mountains
-  Adventure: 
-    - Test adventure A
-    - Test adventure B
+
   Flair: !avoid_repeating
     - A thundering waterfall drops hundreds of feet down from an overhang in the
       steep slopes, forming a cloud of raging water at the base. 

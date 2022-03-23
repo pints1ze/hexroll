@@ -135,8 +135,8 @@ Hex:
     {{Terrain.Flair}}
 
     ##### Adventure Location
-    
-    __{{Adventure.Description}}__
+
+    __{{Adventure}} {{Adventure.Description}}__
 
 
     {%if DungeonDesc-%}

@@ -134,7 +134,7 @@ Hex:
 
     {{Terrain.Flair}}
 
-    ## {{Terrain.AdventureLocation}}
+    ## TEST {{Terrain.Adventure}}
 
 
     {%if DungeonDesc-%}

@@ -6,7 +6,7 @@ Terrain:
     - Desert
     - Plains
 
-  AdventureLocation: Test Adventure
+  Adventure: Test Adventure
 
 
 Mountains:

@@ -5,6 +5,9 @@ Terrain:
     - Coast
     - Desert
     - Plains
+  AdventureLocation: 
+    - Test Adventure A
+    - Test Adventure B
 
 
 Mountains:

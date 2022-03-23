@@ -1,7 +1,11 @@
 AdventureLocation:
+  $sublcass:
+    - AdventureLocationOverview
+    - AdventureLocationPurpose
+
+AdventureLocationOverview:
   Description: !jinja >
     {{StructureDescription}} {{Structure}} of the {{StructureFeatureA}} {{StructureFeatureB}}
-
   StructureDescription:
     - adamantine
     - aerial
@@ -303,7 +307,6 @@ AdventureLocation:
     - writhing
     - yarned
     - yellow
-
   Structure:
     - abbey
     - aerie
@@ -409,7 +412,6 @@ AdventureLocation:
     - tower
     - webs
     - zeppelin
-
   StructureFeatureA:
     - ant-
     - ape-
@@ -570,7 +572,6 @@ AdventureLocation:
     - wounded
     - wraith-
     - zombie
-
   StructureFeatureB:
     - abbot
     - actor
@@ -753,3 +754,6 @@ AdventureLocation:
     - wyvern
     - yeti
     - zombies
+
+AdventureLocationPurpose:
+  Description: This is a test Adventure

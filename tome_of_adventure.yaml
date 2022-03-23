@@ -1,6 +1,7 @@
 AdventureLocation:
-  - AdventureLocationOverview
-  - AdventureLocationPurpose
+  $subclass:
+    - AdventureLocationOverview
+    - AdventureLocationPurpose
 
 AdventureLocationOverview:
   $extends: AdventureLocation

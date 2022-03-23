@@ -6,8 +6,6 @@ Terrain:
     - Desert
     - Plains
 
-  Adventure: Test Adventure
-
 
 Mountains:
   Name: Mountains
@@ -53,7 +51,6 @@ Mountains:
       Loose rocks and boulders may block the pathways, or even worse, fall
       from above unexpectedly.
 
-
   Location:
     - on the edge of the cliffs, at the end of a winding steep trail
     - high in the mountains
@@ -66,6 +63,7 @@ Mountains:
     - inside a cave on the cliff
     - inside an old volcano
 
+  Adventure: Test Adventure
 
 Forest:
   Name: Forest

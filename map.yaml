@@ -134,7 +134,7 @@ Hex:
 
     {{Terrain.Flair}}
 
-    ##### Adventure Location
+    ##### Adeventure Location
     __{{Adventure.Description}}__
 
 
@@ -194,10 +194,7 @@ Hex:
   Feature:
     $roll: Feature
   Adventure: 
-    $roll:
-      $subclass:
-        - AdventureLocationOverview
-        - AdventureLocationPurpose
+    $roll: AdventureLocation
   DungeonDesc: null
   SettlementDesc: null
   InnDesc: null

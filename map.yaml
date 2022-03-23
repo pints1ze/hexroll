@@ -134,7 +134,7 @@ Hex:
 
     {{Terrain.Flair}}
 
-    ## TEST Text TEST
+    ## {{Terrain.Flair}}
 
 
     {%if DungeonDesc-%}

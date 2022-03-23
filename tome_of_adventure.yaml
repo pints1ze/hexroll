@@ -4,6 +4,7 @@ AdventureLocation:
     - AdventureLocationPurpose
 
 AdventureLocationOverview:
+  $extends: AdventureLocation
   Description: !jinja >
     {{StructureDescription}} {{Structure}} of the {{StructureFeatureA}} {{StructureFeatureB}}
   StructureDescription:
@@ -756,4 +757,5 @@ AdventureLocationOverview:
     - zombies
 
 AdventureLocationPurpose:
+  $extends: AdventureLocation
   Description: This is a test Adventure

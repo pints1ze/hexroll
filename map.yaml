@@ -136,7 +136,7 @@ Hex:
 
     ##### Adventure Location
 
-    __{{Adventure}} {{Adventure.Description}}__
+    __{{Adventure.Description|title}}__
 
 
     {%if DungeonDesc-%}

@@ -136,7 +136,7 @@ Hex:
 
     ##### Adventure Location
 
-    __{{Adventure.Description|title}}__ ({{Adventure.Type}})
+    __{{Adventure.Description| title | replace("- ", "-") }}__ ({{Adventure.Type}})
 
 
     {%if DungeonDesc-%}

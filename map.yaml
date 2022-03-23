@@ -134,7 +134,7 @@ Hex:
 
     {{Terrain.Flair}}
 
-    ## TEST {{AdventureLocation.Description}}
+    ## TEST {{Adventure.Description}}
 
 
     {%if DungeonDesc-%}
@@ -192,7 +192,8 @@ Hex:
     - CoastHex
   Feature:
     $roll: Feature
-
+  Adventure: 
+    $roll: AdventureLocation
   DungeonDesc: null
   SettlementDesc: null
   InnDesc: null

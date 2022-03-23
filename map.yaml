@@ -134,7 +134,8 @@ Hex:
 
     {{Terrain.Flair}}
 
-    ##### Adeventure Location
+    ##### Adventure Location
+    
     __{{Adventure.Description}}__
 
 

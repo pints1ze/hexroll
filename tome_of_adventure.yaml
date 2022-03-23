@@ -1,8 +1,6 @@
 AdventureLocation:
-  $roll:
-    $sublcass:
-      - AdventureLocationOverview
-      - AdventureLocationPurpose
+  - AdventureLocationOverview
+  - AdventureLocationPurpose
 
 AdventureLocationOverview:
   $extends: AdventureLocation

@@ -194,7 +194,10 @@ Hex:
   Feature:
     $roll: Feature
   Adventure: 
-    $roll: AdventureLocation
+    $roll:
+      $sublcass:
+        - AdventureLocationOverview
+        - AdventureLocationPurpose
   DungeonDesc: null
   SettlementDesc: null
   InnDesc: null

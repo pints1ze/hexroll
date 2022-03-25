@@ -73,11 +73,11 @@ $main:
 
     {{Realm.Background}}
 
-    {{Realm.RealmType}}
-
     Population: {{settlements | map(attribute='Population') | map('int') | sum}} residents
 
     Ruled by __{{Realm.Ruler.Title}}__ {{Realm.Ruler.NPC.Description}}
+
+    #### {{Realm.Ruler.Antagonist.Name}}
 
     {{Realm.Ruler.NPC.Stats}}
 

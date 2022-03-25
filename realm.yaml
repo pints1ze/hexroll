@@ -127,9 +127,6 @@ Lands:
 
 
 Ruler:
-  Antagonist:
-    $roll:
-      $class: Antagonist
   $subclass:
     - Noble
     - Bishop

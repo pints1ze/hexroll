@@ -401,6 +401,3 @@ $main:
 
     npcs:
       $collect: NPC
-
-    antagonists:
-      $collect: Antagonist

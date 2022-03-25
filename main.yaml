@@ -25,6 +25,7 @@ $include:
   - hexroll/terrains.yaml
   - hexroll/treasures.yaml
   - hexroll/tome_of_adventure.yaml
+  - hexroll/dangerous_destinations.yaml
 
 $main:
   Realm:
@@ -71,6 +72,8 @@ $main:
     %%begin_two_columns_layout_when_printing
 
     {{Realm.Background}}
+
+    {{Realm.$subclass}}
 
     Population: {{settlements | map(attribute='Population') | map('int') | sum}} residents
 
@@ -398,3 +401,6 @@ $main:
 
     npcs:
       $collect: NPC
+
+    antagonists:
+      $collect: Antagonists

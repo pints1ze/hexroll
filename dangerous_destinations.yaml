@@ -1,4 +1,5 @@
 Antagonist:
+  $collection: antagonists
   Name: 
     - Bad Guy a
     - Bad Guy b

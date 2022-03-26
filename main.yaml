@@ -129,10 +129,7 @@ $main:
     
     ## Breakglass <a name="toc-breakglass"></a>
 
-
-    {% for a in antagonists %}
-    Antagonist = {{a}}
-    Antagonist Name = {{a.Name}}{% endfor %}
+    {% for a in antagonists %}Antagonist Name = {{a.Name}}{% endfor %}
 
     %%begin_two_columns_layout_when_printing
 

@@ -1,4 +1,10 @@
 Region:
+  Antagonist:
+    $rollsome: 
+      $debug: Generating regions
+      $class: Antagonist
+      $min: !parameter minimum_number_of_regions
+      $max: !parameter maximum_number_of_regions
   Description: !jinja |
     %%end_two_columns_layout_when_printing
 
@@ -13,14 +19,6 @@ Region:
     {% endfor %}
   Name:
     $roll: RegionNames
-  
-  Antagonist:
-    $rollsome: 
-      $debug: Generating regions
-      $class: Antagonist
-      $min: !parameter minimum_number_of_regions
-      $max: !parameter maximum_number_of_regions
-
   $subclass: !parameter region_classes
 
 

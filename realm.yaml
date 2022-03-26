@@ -53,11 +53,6 @@ Realm:
     - nor
     - dar
     - dor
-  
-  Antagonist:
-    $roll: 
-      $class: Antagonist
-    # $collection: antagonists
 
   Background:
     - The danger of an imminent invasion keeps the people of these lands in

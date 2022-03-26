@@ -198,6 +198,7 @@ Hex:
   Adventure: 
     $roll: AdventureLocation
   Antagonist:
+    $collection: antagonists
     $roll: Antagonist
   DungeonDesc: null
   SettlementDesc: null

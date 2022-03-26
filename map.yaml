@@ -1,10 +1,4 @@
 Region:
-  Villians:
-    $rollsome: 
-      $debug: Generating regions
-      $class: Antagonist
-      $min: 1
-      $max: 2
   Description: !jinja |
     %%end_two_columns_layout_when_printing
 
@@ -221,6 +215,8 @@ Hex:
       $bootstrap:
         HexCounter: !ref HexCounter
         HexUUID: !ref uuid
+  Antagonist:
+    $roll: Antagonist
 
 
 MountainsHex:

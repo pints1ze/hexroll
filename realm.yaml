@@ -56,7 +56,8 @@ Realm:
   
   Antagonist:
     $collection: antagonists
-    $roll: Antagonist
+    $roll: 
+      $class: Antagonist
 
   Background:
     - The danger of an imminent invasion keeps the people of these lands in

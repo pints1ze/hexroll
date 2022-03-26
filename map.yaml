@@ -13,6 +13,18 @@ Region:
     {% endfor %}
   Name:
     $roll: RegionNames
+  
+  Adventure: 
+    $roll: AdventureLocation
+
+  # antagonists:
+  #   $rollsome:
+  #     $class: Antagonist
+  #     $min: 1
+  #     $max: 2
+  Antagonist:
+    $collection: antagonists
+    $roll: Antagonist    
 
   $subclass: !parameter region_classes
 
@@ -195,11 +207,6 @@ Hex:
     - CoastHex
   Feature:
     $roll: Feature
-  Adventure: 
-    $roll: AdventureLocation
-  Antagonist:
-    $collection: antagonists
-    $roll: Antagonist
   DungeonDesc: null
   SettlementDesc: null
   InnDesc: null

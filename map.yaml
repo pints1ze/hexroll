@@ -197,9 +197,9 @@ Hex:
     $roll: Feature
   Adventure: 
     $roll: AdventureLocation
-  Antagonist:
-    $collection: antagonists
-    $roll: Antagonist
+  # Antagonist:
+  #   $collection: antagonists
+  #   $roll: Antagonist
   # Antagonists:
   #   $rollsome:
   #     $class: Antagonist

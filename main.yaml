@@ -73,7 +73,7 @@ $main:
 
     {{Realm.Background}}
 
-    {% for a in antagonists %}Antagonist Name = {{a.Name}}{% endfor %}
+    {% for a in antagonists %}* Antagonist Name = {{a.Name}}{% endfor %}
 
     Population: {{settlements | map(attribute='Population') | map('int') | sum}} residents
 

@@ -17,14 +17,14 @@ Region:
   Adventure: 
     $roll: AdventureLocation
 
-  Antagonists:
-    $rollsome:
-      $class: Antagonist
-      $min: 1
-      $max: 10
-  # Antagonist:
-  #   $collection: antagonists
-  #   $roll: Antagonist    
+  # antagonists:
+  #   $rollsome:
+  #     $class: Antagonist
+  #     $min: 1
+  #     $max: 2
+  Antagonist:
+    $collection: antagonists
+    $roll: Antagonist    
 
   $subclass: !parameter region_classes
 

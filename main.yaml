@@ -73,10 +73,6 @@ $main:
 
     {{Realm.Background}}
 
-    {% for a in antagonists %}
-    ##### {{a.Name}}
-    {% endfor %}
-
     Population: {{settlements | map(attribute='Population') | map('int') | sum}} residents
 
     Ruled by __{{Realm.Ruler.Title}}__ {{Realm.Ruler.NPC.Description}}
@@ -132,6 +128,11 @@ $main:
     %%end_two_columns_layout_when_printing
     
     ## Breakglass <a name="toc-breakglass"></a>
+
+
+    {% for a in antagonists %}
+    Antagonist = {{a}}
+    Antagonist Name = {{a.Name}}{% endfor %}
 
     %%begin_two_columns_layout_when_printing
 
@@ -313,6 +314,9 @@ $main:
     dungeon_names:
       $collect: DungeonName
 
+    antagonists:
+      $collect: Antagonist
+
     secrets:
       $collect: Secret
 
@@ -403,6 +407,3 @@ $main:
 
     npcs:
       $collect: NPC
-
-    antagonists:
-      $collect: Antagonist

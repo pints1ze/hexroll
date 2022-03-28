@@ -11,6 +11,10 @@ Region:
     {% for hex in Hexmap %}
     {{hex.Details}}
     {% endfor %}
+
+    {% for a in Antagonists %}
+    {{a.Name}}
+    {% endfor %}
   Name:
     $roll: RegionNames
   Antagonists:

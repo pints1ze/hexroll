@@ -196,6 +196,11 @@ Hex:
     $roll: Feature
   Adventure: 
     $roll: AdventureLocation
+  Antagonists:
+    $rollsome:
+      $class: Antagonist
+      $min: 1
+      $max: 3
   DungeonDesc: null
   SettlementDesc: null
   InnDesc: null
@@ -207,12 +212,12 @@ Hex:
       $bootstrap:
         HexCounter: !ref HexCounter
         HexUUID: !ref uuid
-  $collections:
-    Antagonists:
-      $rollsome:
-        $class: Antagonist
-        $min: 1
-        $max: 3
+  # $collections:
+  #   Antagonists:
+  #     $rollsome:
+  #       $class: Antagonist
+  #       $min: 1
+  #       $max: 3
   # Antagonist:
   #   $roll: Antagonist
 

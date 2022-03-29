@@ -1001,12 +1001,14 @@ IndividualMission:
     - Steal item from
     - Waylay
   Individual:
-    $subclass: !weighted
-      - IndividualType
-      - Patron^9
+    $roll: Individual
+
+Individual:
+  $subclass: !weighted
+    - IndividualType
+    - Patron^9
 
 IndividualType:
-  $extends: Individual
   Description:
     - Adventurer(s)
     - Agent or diplomat
@@ -1020,7 +1022,6 @@ IndividualType:
     - Secret agent or spy
 
 Patron:
-  $extends: Individual
   Description:
     - Abbot (Asian-style monk)
     - Abbot (heretic)

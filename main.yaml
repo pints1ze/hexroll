@@ -24,8 +24,7 @@ $include:
   - hexroll/sigils.yaml
   - hexroll/terrains.yaml
   - hexroll/treasures.yaml
-  - hexroll/tome_of_adventure.yaml
-  - hexroll/dangerous_destinations.yaml
+  - hexroll/adventure_details.yaml
 
 $main:
   Realm:

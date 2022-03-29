@@ -9,6 +9,7 @@ Terrain:
 
 Mountains:
   Name: Mountains
+
   Flair: !avoid_repeating
     - A thundering waterfall drops hundreds of feet down from an overhang in the
       steep slopes, forming a cloud of raging water at the base. 
@@ -51,7 +52,6 @@ Mountains:
       Loose rocks and boulders may block the pathways, or even worse, fall
       from above unexpectedly.
 
-
   Location:
     - on the edge of the cliffs, at the end of a winding steep trail
     - high in the mountains
@@ -63,7 +63,6 @@ Mountains:
     - behind a waterfall
     - inside a cave on the cliff
     - inside an old volcano
-
 
 Forest:
   Name: Forest

@@ -1,8 +1,8 @@
 Adventure:
-  $subclass:
+  $subclass: !weighted
     - AdventureLocationOverview
     - AdventureLocationPurpose
-    - AdventureMission
+    - AdventureMission^100
 
 AdventureLocationOverview:
   $extends: Adventure
@@ -969,11 +969,11 @@ AdventureLocationPurpose:
 AdventureMission:
   $extends: Adventure
   Type: Mission
-  $subclass:
+  $subclass: !weighted
     - IndividualMission
     - ItemMission
     - LocationMission
-    - EventMission
+    - EventMission^100
 
 IndividualMission:
   $extends: AdventureMission
@@ -1026,6 +1026,8 @@ LocationMission:
 EventMission:
   $extends: AdventureMission
   Description: This is an Event Mission
+
+Patron:
 
 Antagonist:
   $collection: antagonists

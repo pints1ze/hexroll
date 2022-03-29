@@ -1,10 +1,11 @@
-AdventureLocation:
+Adventure:
   $subclass:
     - AdventureLocationOverview
     - AdventureLocationPurpose
+    - AdventureMission
 
 AdventureLocationOverview:
-  $extends: AdventureLocation
+  $extends: Adventure
   Description: !jinja >
     {{StructureDescription}} {{Structure}} of the {{StructureFeatureA}} {{StructureFeatureB}}
   Type: Overview
@@ -758,7 +759,7 @@ AdventureLocationOverview:
     - zombies
 
 AdventureLocationPurpose:
-  $extends: AdventureLocation
+  $extends: Adventure
   Description: !jinja >
     {{LocationContentsA}} {{LocationContentsB}}
   Type: Purpose
@@ -964,6 +965,31 @@ AdventureLocationPurpose:
     - webs
     - well
     - wheel
+
+AdventureMission:
+  $extends: Adventure
+  Type: Mission
+  $subclass:
+    - IndividualMission
+    - ItemMission
+    - LocationMission
+    - EventMission
+
+IndividualMission:
+  $extends: AdventureMission
+  Description: This is an Individual Mission
+
+ItemMission:
+  $extends: AdventureMission
+  Description: This is an Item Mission
+
+LocationMission:
+  $extends: AdventureMission
+  Description: This is an Location Mission
+
+EventMission:
+  $extends: AdventureMission
+  Description: This is an Event Mission
 
 Antagonist:
   $collection: antagonists

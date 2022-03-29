@@ -31,7 +31,7 @@ $main:
     $roll: Realm
 
   ToC: !jinja >
-    * TEST [{{Realm.Title}}](#{{uuid}})
+    * [{{Realm.Title}}](#{{uuid}})
         * [Background](#toc-background)
         * [Regions](#toc-regions)
     {% for r in regions %}
@@ -62,7 +62,7 @@ $main:
             * [OGL](#toc-ogl)
 
   Output: !jinja |
-    # TEST2 {{Realm.Title}} <a name="{{uuid}}"></a>
+    # {{Realm.Title}} <a name="{{uuid}}"></a>
 
     {{svg}}
 

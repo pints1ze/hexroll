@@ -977,7 +977,43 @@ AdventureMission:
 
 IndividualMission:
   $extends: AdventureMission
-  Description: This is an Individual Mission
+  Description: !jinja >
+    {{Mission}} {{Individual}}
+  Mission:
+    - Bribe or negotiate with
+    - Bring message to location of
+    - Capture or arrest
+    - Conceal/smuggle
+    - Deliver/transport
+    - Discover identity of
+    - Distract, decoy, or deceive
+    - Entrap or sting
+    - Extort from
+    - Find missing
+    - Get help from
+    - Guard/protect
+    - Incriminate or frame
+    - Kidnap
+    - Kill/assassinate
+    - Rescue
+    - Sabotage efforts of
+    - Spy upon
+    - Steal item from
+    - Waylay
+  Individual: !weighted
+    - Adventurer(s)
+    - Agent or diplomat
+    - Cleric or religious leader
+    - Criminal/outlaw
+    - Intelligent monster
+    - Local noble
+    - Magic-user
+    - Messenger
+    - Saboteur
+    - Secret agent or spy
+    - Patron^9
+
+
 
 ItemMission:
   $extends: AdventureMission

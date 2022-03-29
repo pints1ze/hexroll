@@ -140,10 +140,6 @@ Hex:
 
     {{Terrain.Flair}}
 
-    ##### Adventure Idea ({{Adventure.Type}})
-
-    __{{Adventure.Description| title | replace("- ", "-") }}__ 
-
     {%if DungeonDesc-%}
     The [__{{DungeonDesc}}__](#{{DungeonUUID}}) is hidden
     {%if Terrain.Hideout%}{{Terrain.Hideout}}{%endif%} somewhere {{Terrain.Location}}.
@@ -190,6 +186,13 @@ Hex:
 
 
     {%endif%}
+
+
+    ##### Adventure Idea ({{Adventure.Type}})
+
+    __{{Adventure.Description| title | replace("- ", "-") }}__ 
+
+
   $sublcass:
     - MountainsHex
     - PlainsHex

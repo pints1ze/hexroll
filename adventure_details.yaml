@@ -970,10 +970,10 @@ AdventureMission:
   $extends: Adventure
   Type: Mission
   $subclass: !weighted
-    - IndividualMission
+    - IndividualMission^100
     - ItemMission
     - LocationMission
-    - EventMission^100
+    - EventMission
 
 IndividualMission:
   $extends: AdventureMission

@@ -72,8 +72,6 @@ $main:
 
     {{Realm.Background}}
 
-    {% for a in antagonists %}* Antagonist Name = {{a.Name}}{% endfor %}
-
     Population: {{settlements | map(attribute='Population') | map('int') | sum}} residents
 
     Ruled by __{{Realm.Ruler.Title}}__ {{Realm.Ruler.NPC.Description}}

@@ -140,11 +140,6 @@ Hex:
 
     {{Terrain.Flair}}
 
-    ##### Adventure Location ({{Adventure.Type}})
-
-    __{{Adventure.Description| title | replace("- ", "-") }}__ 
-
-
     {%if DungeonDesc-%}
     The [__{{DungeonDesc}}__](#{{DungeonUUID}}) is hidden
     {%if Terrain.Hideout%}{{Terrain.Hideout}}{%endif%} somewhere {{Terrain.Location}}.
@@ -170,6 +165,9 @@ Hex:
 
     {{Feature.Flair}}
 
+    ##### Adventure Idea ({{Adventure.Type}})
+
+    __{{Adventure.Description| title | replace("- ", "-") }}__ 
 
     ##### Random encounter
 
@@ -213,20 +211,6 @@ Hex:
       $bootstrap:
         HexCounter: !ref HexCounter
         HexUUID: !ref uuid
-  # Antagonists:
-  #   $rollsome:
-  #     $class: Antagonist
-  #     $min: 1
-  #     $max: 3
-  # Antagonist:
-  #   $roll: Antagonist
-  # $collections:
-  #   Antagonists:
-  #     $rollsome:
-  #       $class: Antagonist
-  #       $min: 1
-  #       $max: 3
-
 
 MountainsHex:
   $extends: Hex

@@ -2174,6 +2174,8 @@ Antagonist:
     - Bad Guy d
     - Bad Guy e
     - Bad Guy f
+  Plan:
+    $roll: VillainousPlan
 
 VillainousPlan:
   $subclass: !weighted

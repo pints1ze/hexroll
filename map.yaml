@@ -14,7 +14,9 @@ Region:
 
     {% for a in Antagonists %}
     __{{a.Name}}__
+
     {{a.Plan.Description}}
+    
     ____
     {% endfor %}
   Name:

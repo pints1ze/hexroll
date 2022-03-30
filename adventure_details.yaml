@@ -2199,8 +2199,11 @@ VillainousPlanConcealment:
   Name: Concealment
   Description: !jinja |
     __{{Name}}__ - {{LongText}}
+    
     * From\: {{FromWhom}}
+    
     * Method\: {{Method}}
+    
 
   LongText: the villain is trying to conceal himself, to conceal his past acts, conceal his organization, conceal evidence, etc.
   FromWhom: !weighted

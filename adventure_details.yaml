@@ -2317,8 +2317,6 @@ NpcBuilderRace:
     - NpcBuilderRaceHalfling
     - NpcBuilderRaceHuman
     - NpcBuilderRaceTiefling
-  Age: !jinja >
-    {{Age}}
 
 NpcBuilderRaceDragonborn: 
   AgeMax: 80

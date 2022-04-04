@@ -144,7 +144,7 @@ Hex:
 
     {{Terrain.Flair}}
 
-    ##### Thie is a test 
+    ##### Thie is a test {{NpcBuilderRace}}
     
     {%if DungeonDesc-%}
     The [__{{DungeonDesc}}__](#{{DungeonUUID}}) is hidden

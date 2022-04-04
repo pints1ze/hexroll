@@ -141,6 +141,10 @@ Hex:
 
     {{Terrain.Flair}}
 
+
+    {{NpcBuilderRace}}
+
+
     {%if DungeonDesc-%}
     The [__{{DungeonDesc}}__](#{{DungeonUUID}}) is hidden
     {%if Terrain.Hideout%}{{Terrain.Hideout}}{%endif%} somewhere {{Terrain.Location}}.

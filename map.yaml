@@ -13,8 +13,11 @@ Region:
     {% endfor %}
 
     {% for a in Antagonists %}
-    {{a.Name}}
+    __{{a.Name}}__
+
     {{a.Plan.Description}}
+    
+    ____
     {% endfor %}
   Name:
     $roll: RegionNames

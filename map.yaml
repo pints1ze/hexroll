@@ -146,7 +146,6 @@ Hex:
 
     ##### Thie is a test 
     {{NpcBuilderRace}}
-    {{NpcBuilderRace.Age}}
     
     {%if DungeonDesc-%}
     The [__{{DungeonDesc}}__](#{{DungeonUUID}}) is hidden

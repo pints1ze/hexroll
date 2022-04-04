@@ -207,6 +207,8 @@ Hex:
     - ForestHex
     - DesertHex
     - CoastHex
+  NpcBuilderRace:
+    $roll: NpcBuilderRace
   Feature:
     $roll: Feature
   Adventure: 

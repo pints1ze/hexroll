@@ -2222,8 +2222,6 @@ VillainousPlanConcealment:
     - Secret identity (establishing). The villain is disguised within the human population, and is building up a new identity for himself. He might have forged documents, or an altered body form. In this case, the villain has created a new identity - if he has taken someone's place, see below for comments.
     - Secret Identity (learning). The villain has replaced a human in the community, and is learning the details of his new identity. This is not a strategy limited to shape-changing villains; anyone can pretend to be someone from far away. The villain might be making some blunders as he impersonates the dead or absent target - he might not know, for example, that the king was a vegetarian, or where the merchant hid the key to his treasure room.
 
-
-
 VillainousPlanConversion:
   Name: Conversion
   Description: !jinja >
@@ -2307,3 +2305,113 @@ VillainousPlanSupportEvil:
   Description: !jinja >
     {{LongText}}
   LongText: the villain is working behind the scenes to help other evil groups
+
+NpcBuilderRace:
+  $subclass:
+    - NpcBuilderRaceDragonborn
+    - NpcBuilderRaceDwarf
+    - NpcBuilderRaceElf
+    - NpcBuilderRaceGnome
+    - NpcBuilderRaceHalfElf
+    - NpcBuilderRaceHalfOrc
+    - NpcBuilderRaceHalfling
+    - NpcBuilderRaceHuman
+    - NpcBuilderRaceTiefling
+  Age: !jinja >
+    {{Age}}\: {{NpcBuilderAgeGroups.(AgeMax/Age)}}
+
+NpcBuilderRaceDragonborn: 
+  AgeMax: 80
+  Age:
+    $diceroll: 5d16
+  Height:
+  Weight:
+
+NpcBuilderRaceDwarf: 
+  AgeMax: 80
+  Age:
+    $diceroll: 5d16
+  Height:
+  Weight:
+
+NpcBuilderRaceElf: 
+  AgeMax: 80
+  Age:
+    $diceroll: 5d16
+  Height:
+  Weight:
+
+NpcBuilderRaceGnome: 
+  AgeMax: 80
+  Age:
+    $diceroll: 5d16
+  Height:
+  Weight:
+
+NpcBuilderRaceHalfElf: 
+  AgeMax: 80
+  Age:
+    $diceroll: 5d16
+  AgeDescriptor: !jinja >
+    {{Age}}\: {{NpcBuilderAgeGroups.(AgeMax/Age)}}
+  Height:
+  Weight:
+
+NpcBuilderRaceHalfOrc: 
+  AgeMax: 80
+  Age:
+    $diceroll: 5d16
+  Height:
+  Weight:
+
+NpcBuilderRaceHalfling: 
+  AgeMax: 80
+  Age:
+    $diceroll: 5d16
+  Height:
+  Weight:
+
+NpcBuilderRaceHuman: 
+  AgeMax: 80
+  Age:
+    $diceroll: 5d16
+  Height:
+  Weight:
+
+NpcBuilderRaceTiefling: 
+  AgeMax: 80
+  Age:
+    $diceroll: 5d16
+  Height:
+  Weight:
+
+NpcBuilderAgeGroups:
+  1: elderly
+  2: senior
+  3: adult
+  4: adolescent
+  5: kid
+  6: toddler
+  7: infant
+  8: newborn
+
+
+NpcBuilderGender:
+
+
+NpcBuilderAge:
+
+
+NpcBuilderDisposition:
+
+
+NpcBuilderAlignment:
+
+
+NpcBuilderReligion:
+
+
+NpcBuilderFinancialStatus:
+
+
+

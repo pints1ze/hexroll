@@ -144,8 +144,10 @@ Hex:
 
     {{Terrain.Flair}}
 
-    ##### Thie is a test {{NpcBuilderRace}}
-
+    ##### Thie is a test 
+    {{NpcBuilderRace}}
+    {{NpcBuilderRace.Age}}
+    
     {%if DungeonDesc-%}
     The [__{{DungeonDesc}}__](#{{DungeonUUID}}) is hidden
     {%if Terrain.Hideout%}{{Terrain.Hideout}}{%endif%} somewhere {{Terrain.Location}}.

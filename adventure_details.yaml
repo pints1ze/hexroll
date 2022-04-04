@@ -2352,8 +2352,6 @@ NpcBuilderRaceHalfElf:
   AgeMax: 80
   Age:
     $diceroll: 5d16
-  AgeDescriptor: !jinja >
-    {{Age}}\: {{NpcBuilderAgeGroups.(AgeMax/Age)}}
   Height:
   Weight:
 

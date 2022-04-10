@@ -1,12 +1,12 @@
 Adventure:
-  $subclass:
+  $subclass: !weighted
     - LocationOverview
     - LocationPurpose
     - IndividualMission
     - ItemMission
     - LocationMission
     - EventMission
-    - VillainousPlan
+    - VillainousPlan^100
   PlayerMotivation:
     - Ability to move inconspicuously in certain groups or places
     - Additional form of movement (swim or breathe water, fly, teleport, etc)
@@ -2207,9 +2207,9 @@ EventMission:
 VillainousPlan:
   Type: Villainous Plan
   $subclass: !weighted
-    - VillainousPlanConcealment
-    - VillainousPlanConversion
-    - VillainousPlanDesecration
+    - VillainousPlanConcealment^100
+    - VillainousPlanConversion^100
+    - VillainousPlanDesecration^100
     - VillainousPlanDestroyCommunity
     - VillainousPlanDestroyGood
     - VillainousPlanEconomicPower

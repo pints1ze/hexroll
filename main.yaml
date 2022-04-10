@@ -25,6 +25,7 @@ $include:
   - hexroll/terrains.yaml
   - hexroll/treasures.yaml
   - hexroll/adventure_details.yaml
+  - hexroll/tome_of_adventure.yaml
 
 $main:
   Realm:

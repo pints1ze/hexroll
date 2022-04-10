@@ -6,6 +6,46 @@ Adventure:
     - ItemMission
     - LocationMission
     - EventMission
+    - VillainousPlan
+  PlayerMotivation:
+    - Ability to move inconspicuously in certain groups or places
+    - Additional form of movement (swim or breathe water, fly, teleport, etc)
+    - Better equipment (possibly magical)
+    - Bonuses to saving throws under certain circumstances
+    - Cure disease
+    - Enhanced ability to cast spells
+    - Enhanced ability to see or hear
+    - Gain experience points or levels
+    - Gain forgiveness or pardons for prior actions
+    - Gain hit points
+    - Improve physical appearance
+    - Improve initiative, rate of attacks or speed of actions
+    - Improvement in movement rate
+    - Improvement or bonus to class ability (turning undead, picking locks, etc)
+    - Increased strength or other ability score
+    - Learn additional language
+    - Money
+    - Noble status or improved social status
+    - Permit travel (casting of teleport, creation of planar gate, opening of dimensional gateway, etc)
+    - Permit travel (required documents, safe-passage, etc)
+    - Provide needed equipment
+    - Receive useful information
+    - Remove a curse (or other problem lingering from a prior adventure)
+    - Reverse aging
+    - To-hit or damage bonus in certain circumstances
+  CharacterMotivation: !weighted
+    - A person offers to trade information about the opportunity in exchange for money^2
+    - Dream or vision suggests the opportunity in symbols and metaphors
+    - Friend, relative, or mentor of a character informs party of the opportunity
+    - Inquiries in taverns lead to a rumor of this potential opportunity^3
+    - Legend or prophesy suggests the opportunity
+    - Letter or message is intercepted by characters (possibly due to mistaken identity, possibly overheard)
+    - Letter or message is sent to characters
+    - Potential employer contacts party to offer the opportunity^9
+    - Potential employer has posted signs with some details of the opportunity^2
+    - Recently arrived people bring back word of the opportunity
+    - Rumors are floating around with some details of the opportunity^2
+    - Sent dream suggests the opportunity in clear terms, but without revealing who sent the dream or why
 
 LocationOverview:
   $extends: Adventure
@@ -2162,3 +2202,237 @@ EventMission:
     - Theft
     - Trailblazing attempt into new area
     - Treason and aftermath
+
+
+VillainousPlan:
+  $subclass: !weighted
+    - VillainousPlanConcealment
+    - VillainousPlanConversion
+    - VillainousPlanDesecration
+    - VillainousPlanDestroyCommunity
+    - VillainousPlanDestroyGood
+    - VillainousPlanEconomicPower
+    - VillainousPlanEvokeCatastrophy
+    - VillainousPlanFood
+    - VillainousPlanGainFavor
+    - VillainousPlanIncreaseCapability
+    - VillainousPlanPoliticalPower
+    - VillainousPlanRandomActs
+    - VillainousPlanReputation
+    - VillainousPlanSubversion
+    - VillainousPlanSupportEvil
+
+VillainousPlanConcealment:
+  Name: Concealment
+  Description: !jinja |
+    * __{{Name}}__ - {{LongText}}
+    * From\: {{FromWhom}}
+    * Method\: {{Method}}
+  LongText: the villain is trying to conceal himself, to conceal his past acts, conceal his organization, conceal evidence, etc.
+  FromWhom: !weighted
+    - Another villain
+    - Another villain's minions
+    - Bounty hunters or adventurers^2
+    - Foreign authorities or military
+    - Former victim
+    - Group of former allies
+    - Local authorities or militia^3
+  Method:
+    - Assassination. The Villain is targeting anyone who could identify him from a past identity he wants to keep secret, or is killing those who know about his plans. In other words, the villain might be trying to conceal himself or his activities; these aren't always the same. A villain engaged in secret activities might be completely certain he can't be identified, but still worried that his plot could be uncovered. Assassinations might be the last resort when a villainous plot is already starting to fall apart. The villain's minions might be his targets, too, if things have gone badly and the villain is concealing his tracks.
+    - Eliminating Evidence (damage control). The villain is trying to eliminate evidence of a plan or crime that failed, and that he has written off. He might be taking several actions at once; killing his own minions that were involved, killing witnesses, stealing documents and other evidence, etc.
+    - Eliminating Evidence (mopping up). The villain is eliminating evidence of a plan or crime that has succeeded - covering his tracks, in other words. If he up a usurper on the throne (to choose one example), he might still need to kill the minion or dupe who poisoned the true king. Or, he might need to change some historical records that could reveal the usurper's non-noble pedigree. Most crimes leave evidence behind.
+    - Frame-up. The villain is framing another person (or monster) for a crime he committed himself. The target might be a minion, an innocent bystander the villain dislikes, or a monster such as a nearby dragon (dragons being excellent fall-guys for arsonists). Remember also; from the villain's perspective, the enemy of his enemy is not his friend - he's a potential fall guy.
+    - Lair-Building (rural). The villain is building a concealed lair to hide himself and his activities from the group indicated in column 1. This could be the activity of a mindless monster (in which case column 1 is irrelevant), or it might be part of the thought-out plan of a relatively intelligent mastermind.
+    - Lair-Building (urban or village). The villain is building a hidden lair within a civilized community. Again, this could be the instinctive action of an unintelligent beast (such as a giant spider nesting in an attic, or a ghoul making tunnels under a cemetery) or might be the first step in a mastermind's plan (e.g., an evil priest digging a secret basement-complex).
+    - Organization (facade). The villain is creating an organization of innocent-looking minions in plain sight, but with a secret agenda for the group. The organization might be a cover story for existing minions (yes, we are all circus performers!) or it might be a way of recruiting unsuspecting locals to join. In this sort of operation, the villain is primarily trying to conceal the organization's secret operations rather than to conceal himself; he might even be a prominent citizen of the town or village where the organization is being created. His plan might include recruiting people away from the local community to a rural “temple” or “lodge,” or the organization's base might be located right in the middle of the community (for example, an innocent-looking store that actually fences stolen goods brought in by caravan from the nearby city). To determine the organization's secret agenda, you might want to roll again on the Master Table. Note that this sort of plan is almost certainly the agenda of an intelligent villain, even if the operation is run by a minion with lower intelligence.
+    - Organization (secret). The villain is creating a secret organization of minions, meeting in secret with no cover story for their activities. This could be a secret cult, a plan to overthrow the government, or the unification of wererat tribes in the sewer tunnels of a large city. Secret societies can take many forms if you're creative.
+    - Secret identity (establishing). The villain is disguised within the human population, and is building up a new identity for himself. He might have forged documents, or an altered body form. In this case, the villain has created a new identity - if he has taken someone's place, see below for comments.
+    - Secret Identity (learning). The villain has replaced a human in the community, and is learning the details of his new identity. This is not a strategy limited to shape-changing villains; anyone can pretend to be someone from far away. The villain might be making some blunders as he impersonates the dead or absent target - he might not know, for example, that the king was a vegetarian, or where the merchant hid the key to his treasure room.
+
+VillainousPlanConversion:
+  Name: Conversion
+  Description: !jinja |
+    * __{{Name}}__ - {{LongText}}
+    * Method\: {{Method}}
+  LongText: the villain is trying to convert others to his way of thinking (as opposed to subversion, which involves using them without changing their minds)
+  Method:
+    - Addiction. The villain uses peoples' addictions to get them to take evil actions
+    - Bad Advice. The villain advises people to engage in evil actions, working from some position of authority he has already obtained (e.g., a good priest, a military leader, a city alderman, a prosecutor, etc). The villain might be giving insidious advice to the population at large (by preaching war, for example), or he might be in the position of an adviser to a noble, a guildmaster, or some other powerful person. The “evil vizier” of Arabian folklore is a prime example of this sort of villain.
+    - Blackmail. The villain is blackmailing people into committing evil actions. These actions might or might not actually change their alignments, depending in how you use alignment in your game.
+    - Debts. The villain is a moneylender or has control of money (a local exchequer or military quartermaster, perhaps) and is using peoples' debts to force them into undertaking evil actions.
+    - Demonic Gifts. The villain gives “gifts” of a demon's assistance. Eventually, the victim becomes reliant or even addicted to such help, and falls into the villain's (or the demon's) clutches as a helpless pawn.
+    - Enchantment. The villain is magically charming people, then persuading or ordering them to commit evil actions.
+    - Hostages. The villain takes hostages, compelling their kin or the hostages themselves to perform evil actions in exchange for freedom or good treatment.
+    - Magic. The villain uses magical means (using an item, probably) to change the alignment of his victims. The effect might only work from long-term exposure to the item, or it might be instantaneous.
+    - Persuasion. The silver-tongued devil is able to convert people to his cause by words alone. This might be through religious conversions, or by persuading people to take specifically evil actions. This is the “tempter” type of villain common in European morality tales (eve and the serpent, Marlowe and Goethe's versions of the Doctor Faustus story, etc.)
+    - Money. The villain simply pays people to take evil actions.
+    - Obligations of Honor. The villain is using peoples' open-ended promises and oaths as a means of getting evil actions done. The fictionalized mafia of the Godfather movies is an excellent example; by doing a favor in exchange for another, unspecified, favor in the future, the villain can force people to undertake tasks they wouldn't have agreed to ahead of time if they had known what would be required of them.
+    - Minions Give Bad Advice. The villain's minions advise evil actions from positions of authority. The plan is basically the same as “Bad Advice” above, but performed by the villain's minions instead of by the villain himself. The villain remains one step removed from the dirty work, possibly more anonymous than someone in a position to be giving advice.
+    - Minions Take Hostages. The villain's minions hold hostages to compel evil actions from the hostage's friends or kin. This is like the “Hostages” entry above, but the minions are the ones on the front line. As always, the weakness in the plan is that if you want something done right, you need to do it yourself.
+    - Minions Use Addictions. The villain's minions use peoples' addictions to get them to take evil actions. The minions might be supplying people with addictive substances, might be taking over the operations of existing suppliers by force or guile, or might be blackmailing people (assuming the drugs are illegal).
+    - Minions Use Blackmail. Similar to the “Blackmail” plot, but the villain's minions are blackmailing people into performing evil actions rather than the villain himself.
+    - Minions Use Enchantment. The villain's minions are charming people to get them to perform evil actions. This might be the same as “Enchantment” above, but it might be that the villain himself doesn't have the magical capability to enchant people. If the villain's minion is able to use such magic, and the villain isn't, keep in mind that the minion might have his own secret agenda.
+    - Minions Use Magic. The villain's minions are directly changing peoples' moral alignment with the use of magic – whether this is an inherent capability or by the use of a powerful magic item (or even an artifact). As with all minion-type plans, the minions might be slightly incompetent, or might be intelligent enough to have their own agenda.
+    - Minions Use Money. The villain's minions pay people to undertake evil actions. This is only different from “subversion” in that the actions are presumably heinous enough to cause a possible change in alignment.
+    - Minions Use Obligations of Honor. The villain has a minion who is a feudal lord, a crime boss, or who holds some other station in which people make open-ended promises to him. At the villain's request or command, the minion is able to take advantage of these open ended promises to extort actions people would never directly have agreed to.
+    - Minions Use Persuasion. The villain's minions persuade people into a religious or moral conversion to evil (or Chaos, depending upon the campaign). Most likely, the villain has the minion doing the job because the villain lacks the charisma (or the human appearance) to pull it off.
+
+VillainousPlanDesecration:
+  LongText: the villain seeks to desecrate a location, an item, or an event (desecration could be targeted on religion or against a tradition)
+  $subclass:
+    - VillainousPlanDesecrationLocation
+    - VillainousPlanDesecrationEvent
+
+
+VillainousPlanDesecrationLocation:
+  Name: Desecration (Location)
+  $extends: VillainousPlanDesecration
+  Description: !jinja |
+    * __{{Name}}__ - {{LongText}}
+    * Method\: {{Method}}
+  Method:
+    - Conquest. Villain plans to conquer and occupy the holy site by military assault; using a frontal attack, infiltration, or the help of a traitor.
+    - Nullification From Afar. The villain plans to counteract the power of a holy site with activities he can perform in another location. Examples might include such things as building a dark mirror-image location as a counteracting force, or summoning clouds to hang permanently over a sun temple. Possibilities for this are pretty vast.
+    - Raze it to the Ground. The villain plans to physically destroy a temple or holy site using an earthquake, burning it, exploding it, or using some other implement of physical destruction other than a frontal assault.
+    - Seed of Evil. The villain plans to desecrate the temple or holy site by planting an unholy object on the premises, probably in a hidden place (but also, possibly, substituting something in plain sight with a duplicate). He might replace the eye of an idol with the eye of a demon, perhaps he might bury the body of a hanged murderer under the altar, or perhaps a stone soaked in the cursed waters of La’aashoon might be used to replace a flagstone.
+    - Stealing the Relics. The villain plans to steal or modify the specific holy item that gives a temple or a holy site its power or significance. He might be planning to replace it with a worthless forgery, or he might plan just to hide it away. This is a good plot to introduce two levels of villain – the one who is supposed to arrange the actual theft, and a more powerful master who plans to use or destroy the relic.
+    - Target the Congregation. The villain plans to subvert or convert the temple’s congregation into attacking the priests or otherwise destroying the temple or holy site.
+    - Target the Priesthood (Guile). The villain plans to eliminate or remove the servants of a holy site by trickery, then occupy, desecrate, or destroy the site. He might do so by impersonating a messenger from the high priesthood calling the priests away to an emergency conclave, perhaps. A nearby “natural” disaster might also be used as the decoy.
+    - Target the Priesthood (Stealth). The villain plans to eliminate the servants of a holy site by stealthy means, allowing him to occupy, desecrate, or destroy the site at leisure. He might even keep the site open for business afterwards! This sort of plot might include assassinations, kidnappings, disguised replacements for the missing priests, or man other kinds of nefarious doings.
+    - Target the Priesthood (Subvert). The villain plans to subvert the priesthood to evil, and use them to desecrate the temple. For ideas about his methods, you might want to take a look at the “Conversion” and “Subversion” tables (Table 1-13 and Table 1-32)
+    - Unholy Event. The villain plans to desecrate the temple or holy site by causing some unholy action to take place there. Examples might include a human sacrifice, the speaking of ancient or blasphemous words, summoning a demon within the precincts, or a formal rededication of the temple to an evil deity. Most such plots would require someone to get into the site, although it might not need to be the villain himself.
+
+VillainousPlanDesecrationEvent:
+  Name: Desecration (Event)
+  $extends: VillainousPlanDesecration
+  Description: !jinja |
+    * __{{Name}}__ - {{LongText}}
+    * Method\: {{Method}}
+    * Ceremony\: {{Ceremony}}
+    * Feature\: {{Feature}}
+  Method:
+    - Attack with violence
+    - Discredit Beforehand (legal or political)
+    - Discredit Beforehand (religious authority)
+    - Disrupt with violence
+    - Interrupt with Objection (legal or political)
+    - Interrupt with Objection (religious authority)
+    - Kidnap Required Officials
+    - Kidnap Required Participants
+    - Steal Traditional Items
+    - Subvert with counterfeit items or people
+  Ceremony:
+    - Religious or Secular; Celebration of a secular event such as the end of a great war or the end of a famine.
+    - Religious or Secular; Harvest’s beginning or end
+    - Religious; Anniversary of event in history of the religion (battle victory, writing of a religious text, appearance of an avatar, etc)
+    - Religious; Anniversary of event in life of deity
+    - Religious; Anniversary of event in life of hero/saint
+    - Religious; Astrological Conjunctions
+    - Religious; Commemoration of a local religious event such as the founding of the local temple or even the conversion of the baron’s grandfather to the sect.
+    - Religious; Eclipse
+    - Religious; End/beginning of year
+    - Religious; Equinox
+    - Religious; Full or new moon
+    - Religious; Lunar Solstice
+    - Religious; Particular day ordained by the deity or a sacred text
+    - Religious; Planting season (often involving some sort of fertility rite, either sexual or involving blood if ancient religions are used as the model).
+    - Religious; Scriptural progression. If the religion’s scripture tracks through the year, the end of one chapter or book and the beginning of another might be a significant date. For example, a temple might read from the Book of Autumn, the Book of Summer, the Book of Spring and the Book of Winter. The changeover from one to the next might involve unusual ceremonies or a festival.
+    - Religious; Solstice (closest and farthest point from sun)
+    - Secular or Religious; rites of passage or coming-of-age ceremonies. Following the model of ancient religions, these are almost always different ceremonies for males and females, and might be on different dates.
+    - Secular; Celebration of the local lord’s birthday or anniversary.
+    - Secular; Coronation or other transference of power (at a guild or in town government, for example).
+    - Secular; The opening of a market fair, or a tournament (assuming that these are wrapped up in enough tradition to be considered something that could be “desecrated”).
+  Feature:
+    - Animal sacrifice (particular animal, chosen ahead of time, fitting certain criteria)
+    - Bringing a particular object to a particular place and installing it there
+    - Building and maintaining a temporary structure for a period of time
+    - Creation of a Particular Sound
+    - Crowning or other rites focusing on a particular a person (person chosen ahead of time, must be that person). This would be something like the “Queen of the May,” or the local baron, or some other person who can’t simply be replaced.
+    - Day of Fasting
+    - Handing out some sort of food, from free beer to sacks of grain, to a blessed piece of fruit. The food might or might not be prepared or consumed during the ceremony itself.
+    - Human sacrifice is part of the ceremony (if chaos/evil cult), or animal sacrifice (if sect is lawful/good). Ceremony requires a particular sacrificial victim, chosen ahead of time, fitting certain criteria.
+    - Opening and entering an underground area normally kept sealed
+    - Planting of seeds
+    - Reading of a particular prayer
+    - Reading of omens, from the shape of clouds to the entrails of a sacrificial beast, to the release of birds to read the future in the pattern of their flight.
+    - Recitation of articles of authority
+    - Re-enactment of an event from the past
+    - Re-enactment of an event from the religion’s mythology
+    - Rite of passage is part of the ceremony. Requires presence of the candidates at the very least.
+    - Sexual activity; most common at fertility rites or rites of passage, but possible in any context depending on the culture or the religion as established in the campaign
+    - Submersion in water, or other use of water in a ceremony
+    - Traditional dance (the quality of it, or its adherence to particular standards, might be read as an omen).
+    - Wild festival in which the normal rules of society are relaxed (this might be a difficult one for a villain to figure out how to desecrate)
+
+
+VillainousPlanDestroyCommunity:
+  Name: Destroy Community
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain is trying to kill, economically destroy, or otherwise irreparably damage a particular community (possibly a sub-community or organization). He could have various motives, ranging from annoyance to following the orders of a greater villain.
+
+VillainousPlanDestroyGood:
+  Name: Destroy Good-Aligned Group
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain seeks to destroy a good-aligned group, either because their morals offend him, or as the first step in a larger plan
+
+VillainousPlanEconomicPower:
+  Name: Economic Power
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain is working on gaining wealth, either as an end in itself or to fund the next step in a larger plan
+
+VillainousPlanEvokeCatastrophy:
+  Name: Evoke Catastrophic Event
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain is trying to set off a natural, magical, psychic, or political disaster. This might be an end in itself, or the first step in some other plan.
+
+VillainousPlanFood:
+  Name: Food
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain seeks to get food for himself, a monster, or for his organization. Basic subsistence is the primary goal of many lesser villains, while reliable food sources for minions can be the objective of more powerful leaders
+
+VillainousPlanGainFavor:
+  Name: Gain Favor of Another Villain
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain wants to impress someone. He might be trying to impress his boss, trying to gain an ally, or showing someone that he's worthy of employment as a minion.
+
+VillainousPlanIncreaseCapability:
+  Name: Increase Personal Capability
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain is trying to increase his inherent personal power. This might include gaining levels of experience, useful information, magic items, etc.
+
+VillainousPlanPoliticalPower:
+  Name: Political Power
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain seeks to gain direct or indirect political power at some level of government.
+
+VillainousPlanRandomActs:
+  Name: Random Acts
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain acts randomly in villainous ways
+
+VillainousPlanReputation:
+  Name: Reputation
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain is trying to enhance his own reputation, either as an invincible villain or as a good person (which would be an infiltration tactic)
+
+VillainousPlanSubversion:
+  Name: Subversion to the Villain's Purposes
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain is trying to mislead people into supporting his nefarious enterprises
+
+VillainousPlanSupportEvil:
+  Name: Support Evil Groups Secretly
+  Description: !jinja >
+    {{LongText}}
+  LongText: the villain is working behind the scenes to help other evil groups

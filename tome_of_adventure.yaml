@@ -2205,6 +2205,7 @@ EventMission:
 
 
 VillainousPlan:
+  Type: Villainous Plan
   $subclass: !weighted
     - VillainousPlanConcealment
     - VillainousPlanConversion
@@ -2282,7 +2283,6 @@ VillainousPlanDesecration:
   $subclass:
     - VillainousPlanDesecrationLocation
     - VillainousPlanDesecrationEvent
-
 
 VillainousPlanDesecrationLocation:
   Name: Desecration (Location)

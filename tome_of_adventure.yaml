@@ -1,6 +1,6 @@
 AdventureSeed:
   $subclass: !weighted
-    - LocationOverview
+    - LocationOverview^100
     - LocationPurpose
     - IndividualMission
     - ItemMission
@@ -2286,8 +2286,8 @@ VillainousPlanDesecration:
     - VillainousPlanDesecrationEvent
 
 VillainousPlanDesecrationLocation:
-  Name: Desecration (Location)
   $extends: VillainousPlanDesecration
+  Name: Desecration (Location)
   Description: !jinja |
     * __{{Name}}__ - {{LongText}}
     * Method\: {{Method}}
@@ -2304,8 +2304,8 @@ VillainousPlanDesecrationLocation:
     - Unholy Event. The villain plans to desecrate the temple or holy site by causing some unholy action to take place there. Examples might include a human sacrifice, the speaking of ancient or blasphemous words, summoning a demon within the precincts, or a formal rededication of the temple to an evil deity. Most such plots would require someone to get into the site, although it might not need to be the villain himself.
 
 VillainousPlanDesecrationEvent:
-  Name: Desecration (Event)
   $extends: VillainousPlanDesecration
+  Name: Desecration (Event)
   Description: !jinja |
     * __{{Name}}__ - {{LongText}}
     * Method\: {{Method}}

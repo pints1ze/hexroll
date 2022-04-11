@@ -1,4 +1,4 @@
-Adventure:
+AdventureSeed:
   $subclass: !weighted
     - LocationOverview
     - LocationPurpose
@@ -48,10 +48,10 @@ Adventure:
     - Sent dream suggests the opportunity in clear terms, but without revealing who sent the dream or why
 
 LocationOverview:
-  $extends: Adventure
+  $extends: AdventureSeed
+  Type: Location Overview
   Description: !jinja >
     {{StructureDescription}} {{Structure}} of the {{StructureFeatureA}} {{StructureFeatureB}}
-  Type: Overview
   StructureDescription:
     - adamantine
     - aerial
@@ -802,10 +802,10 @@ LocationOverview:
     - zombies
 
 LocationPurpose:
-  $extends: Adventure
+  $extends: AdventureSeed
+  Type: Location Purpose
   Description: !jinja >
     {{LocationContentsA}} {{LocationContentsB}}
-  Type: Purpose
   LocationContentsA:
     - ancestral
     - awakening-
@@ -1010,10 +1010,10 @@ LocationPurpose:
     - wheel
 
 IndividualMission:
-  $extends: Adventure
+  $extends: AdventureSeed
+  Type: Individual Mission
   Description: !jinja >
     {{MissionType}} {{Individual.Description}}
-  Type: Mission (Individual)
   MissionType:
     - Bribe or negotiate with
     - Bring message to location of
@@ -2060,8 +2060,8 @@ Patron:
     - Zoo owner
 
 ItemMission:
-  $extends: Adventure
-  Type: Mission (Item)
+  $extends: AdventureSeed
+  Type: Item Mission
   Description: !jinja >
     {{MissionType}} {{Subject}}
   MissionType:
@@ -2108,8 +2108,8 @@ ItemMission:
     - Weapon (siege engine, famous sword, etc)
 
 LocationMission:
-  $extends: Adventure
-  Type: Mission (Location)
+  $extends: AdventureSeed
+  Type: Location Mission
   Description: !jinja >
     {{MissionType}} {{Subject}}
   MissionType: !weighted
@@ -2161,8 +2161,8 @@ LocationMission:
     - Wharfs or Dock
 
 EventMission:
-  $extends: Adventure
-  Type: Mission (Event)
+  $extends: AdventureSeed
+  Type: Event Mission
   Description:  !jinja >
     {{MissionType}} {{Subject}}
   MissionType: !weighted
@@ -2205,6 +2205,7 @@ EventMission:
 
 
 VillainousPlan:
+  $extends: AdventureSeed
   Type: Villainous Plan
   $subclass: !weighted
     - VillainousPlanConcealment^100

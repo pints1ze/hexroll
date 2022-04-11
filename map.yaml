@@ -194,9 +194,9 @@ Hex:
     {%endif%}
 
 
-    ##### Adventure Idea ({{Adventure.Type}})
+    ##### Adventure Idea ({{AdventureSeed.Type}})
 
-    __{{Adventure.Description| title | replace("- ", "-") }}__ 
+    {{AdventureSeed.Description| title | replace("- ", "-") }}
 
 
   $sublcass:
@@ -209,8 +209,8 @@ Hex:
     $roll: NpcBuilderRace
   Feature:
     $roll: Feature
-  Adventure: 
-    $roll: Adventure
+  AdventureSeed: 
+    $roll: AdventureSeed
   DungeonDesc: null
   SettlementDesc: null
   InnDesc: null
